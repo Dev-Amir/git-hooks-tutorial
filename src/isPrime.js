@@ -1,5 +1,9 @@
 function isPrime(num) {
-  for (var i = 1; i < num; i++) {
+  if (num < 2) {
+    return false;
+  }
+
+  for (let i = 2; i < num; i++) {
     if (num % i === 0) {
       return false;
     }
@@ -7,3 +11,5 @@ function isPrime(num) {
 
   return true;
 }
+
+module.exports = isPrime;
